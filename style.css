@@ -1,0 +1,185 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root {
+	--color-lightgrey: #eee;
+	--color-grey: #ddd;
+	--color-yellow: #f1c40f;
+}
+
+html {
+	box-sizing: border-box;
+} body {
+	font-family: 'Lato', sans-serif;
+	background-color: var(--color-lightgrey);
+	font-size: 1.1rem;
+	margin: 0;
+	padding: 0;
+} 
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background-color: inherit;
+} nav > h1 {
+	width: 100%;
+	margin-left: 20px;
+} .nav-links {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+} .nav-links > a {
+	margin: 0px 30px 0px 0px;
+	text-decoration: none;
+	color: inherit;
+}
+
+@media (max-width: 600px) {
+	nav {
+		flex-direction: column;
+	} nav > h1 {
+		margin-bottom: 10px;
+		margin-left: 0;
+		width: auto;
+		text-align: center;
+	} .nav-links {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		margin: 10px;
+	}
+	main {
+		margin-top: 150px !important;
+	}
+	#features {
+		text-align: center;
+	} 
+}
+
+main {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} section {
+}
+
+button {
+	border-style: none;
+	border-radius: 2px;
+	background-color: var(--color-yellow);
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	padding: 10px 20px;
+	cursor: pointer;
+} button:hover {
+	background-color: orange;
+	transition: background-color 1s;
+}
+
+#email-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+} #email-form > h2 {
+	margin: 10px 0 20px 0;
+} #email-form > input {
+	padding: 6px;
+	font-size: .9rem;
+	width: 300px;
+} #email-form > button {
+	margin-top: 16px;
+	font-weight: bold;
+	padding: 6px 16px;
+}
+
+#features {
+	max-width: 900px;
+	margin: 0 20px 40px 20px;
+} #features > h3 {
+	font-size: 1.8rem;
+	margin-bottom: 0;
+} #features > p {
+	margin: 0;
+}
+
+#how-it-works {
+	margin: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+} #how-it-works > iframe {
+	width: 95%;
+	max-width:630px;
+}
+
+#pricing {
+	margin: 30px;
+	display: grid;
+	grid-template-areas: 'price1 price2 price3';
+	width: 100%;
+	max-width: 1050px;
+} 
+#price1 { grid-area: 'price1'; }
+#price2 { grid-area: 'price2'; }
+#price3 { grid-area: 'price3'; }
+
+.price-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	margin: 0 10px 0 10px;
+} .price-box > label {
+	width: 100%;
+	text-align: center;
+	background-color: var(--color-grey);
+	padding: 15px 0 15px 0;
+	font-weight: bold;
+	text-transform: uppercase;
+} .price-box > h4 {
+	font-size: 1.8rem;
+	margin: 20px 0 20px 0;
+} .price-box > p {
+	margin: 0;
+	text-align: center;
+	line-height: 2rem;
+} .price-box > button {
+	margin: 30px 0 20px 0;
+}
+
+@media (max-width: 800px) {
+	#pricing {
+		grid-template-areas:
+			'price1'
+			'price2'
+			'price3';
+		width: 350px;
+	} .price-box { margin-top: 15px; }
+}
+
+footer {
+	background-color: var(--color-grey);
+	color: #444;
+	margin: 0;
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+} .footer-links {
+	padding: 20px 20px 10px 0;
+	text-align: right;
+} .footer-links > a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: black;
+} footer > p {
+	margin: 0;
+	padding: 0 20px 20px 0;
+	text-align: right;
+	font-size: .98rem;
+}
